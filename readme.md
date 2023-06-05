@@ -1,4 +1,4 @@
-# Spring Boot With Kotlin Project Template
+# Spring Boot With Java Project Template
 
 ### Tech Stack
 - Spring Boot 2.7.13-SNAPSHOT
