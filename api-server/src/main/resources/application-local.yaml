@@ -1,0 +1,19 @@
+# local
+spring:
+  profiles: local
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8080
+  servlet:
+    context-path: /api
+
+# logging
+logging:
+  level:
+    org.hibernate: DEBUG
+    # org.hibernate.type.descriptor.sql: trace # Binding 값
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.transaction: DEBUG
