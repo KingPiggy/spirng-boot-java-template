@@ -22,6 +22,7 @@ $ docker run --name mysql-kingpiggy -e MYSQL_ROOT_PASSWORD=tmdgns2 -d -p 3306:33
 ```
 
 (2) Application
+1. VM Option<BR>
 ```
 -Dspring.profiles.active=core,local
 ```

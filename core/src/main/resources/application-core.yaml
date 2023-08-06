@@ -23,6 +23,9 @@ spring:
     use-legacy-processing: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/study_java_db?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/kingpiggy_study?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: tmdgns2
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
