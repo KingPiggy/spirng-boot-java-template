@@ -17,8 +17,8 @@
 (1) DB
 
 ```bash
-$ docker pull mysql:8.0.29
-$ docker run --name mysql-kingpiggy -e MYSQL_ROOT_PASSWORD=tmdgns2 -d -p 3306:3306 mysql:8.0.29
+$ docker pull mysql:8
+$ docker run --name local-mysql -e MYSQL_ROOT_PASSWORD=${PASSWORD} -d -p 3306:3306 mysql:8
 ```
 
 (2) Application
