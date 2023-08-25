@@ -1,19 +1,10 @@
 # Spring Boot With Java Project Template
-## For study
-
-<BR>
-
---- 
 
 <BR>
 
 ### Tech Stack
 - Spring Boot 2.7.13-SNAPSHOT
 - Java 17
-
-<BR>
-
---- 
 
 <BR>
 
@@ -25,10 +16,6 @@
 3. Delete ".gradle", ".idea" directory only once. And reopen project.
 4. Change "Build and Run" configuration. (gradle -> InteliJ IDEA)
 5. Run ApiServerApplication
-
-<BR>
-
---- 
 
 <BR>
 
@@ -45,10 +32,6 @@ $ docker run --name local-mysql -e MYSQL_ROOT_PASSWORD=${PASSWORD} -d -p 3306:33
 ```
 -Dspring.profiles.active=core,local
 ```
-
-<BR>
-
---- 
 
 <BR>
 
