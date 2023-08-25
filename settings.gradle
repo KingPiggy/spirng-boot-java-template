@@ -8,3 +8,4 @@ pluginManagement {
 rootProject.name = 'spirng-boot-java-template'
 include 'core'
 include 'api-server'
+include 'batch-server'
