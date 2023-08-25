@@ -1,8 +1,21 @@
 # Spring Boot With Java Project Template
+## For study
+
+<BR>
+
+--- 
+
+<BR>
 
 ### Tech Stack
 - Spring Boot 2.7.13-SNAPSHOT
-- Java, JDK 17
+- Java 17
+
+<BR>
+
+--- 
+
+<BR>
 
 ### How to use (based on Intelij)
 1. Download release tag by zip
@@ -12,6 +25,12 @@
 3. Delete ".gradle", ".idea" directory only once. And reopen project.
 4. Change "Build and Run" configuration. (gradle -> InteliJ IDEA)
 5. Run ApiServerApplication
+
+<BR>
+
+--- 
+
+<BR>
 
 ### Run Configuration
 (1) DB
@@ -26,3 +45,30 @@ $ docker run --name local-mysql -e MYSQL_ROOT_PASSWORD=${PASSWORD} -d -p 3306:33
 ```
 -Dspring.profiles.active=core,local
 ```
+
+<BR>
+
+--- 
+
+<BR>
+
+### Feature
+#### API Server
+1. REST API
+
+#### Core
+1. Spring Data JPA
+2. Mybatis
+3. AOP
+
+#### Batch Server
+1. Tasklet
+2. Reader + (Processor) + Writer
+3. ShedLock
+4. Spring Schedule
+
+<BR>
+
+--- 
+
+<BR>
