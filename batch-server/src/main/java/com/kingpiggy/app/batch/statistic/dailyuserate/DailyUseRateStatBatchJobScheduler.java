@@ -5,8 +5,8 @@ import com.kingpiggy.app.common.JobUtil;
 import com.kingpiggy.app.core.common.utils.ErrorUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +18,7 @@ import static com.kingpiggy.app.batch.statistic.dailyuserate.DailyUseRateStatBat
 @Slf4j
 @Component
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "batch.daily-use-rate-stat.enabled", havingValue = "true")
 public class DailyUseRateStatBatchJobScheduler {
 
     private final DailyUseRateStatBatchConfig dailyUseRateStatBatchConfig;
@@ -25,13 +26,10 @@ public class DailyUseRateStatBatchJobScheduler {
 
     @Scheduled(cron="0/10 * * * * *") // 10 seconds interval
     public void schedulerForGameA() {
-        JobParameters jobParameters = JobUtil.getJobParameters(makeParamMap("Game A"));
-        System.out.println(jobParameters);
-
         try {
             jobLauncher.run(
                     dailyUseRateStatBatchConfig.dailyUseRateStatJob(),
-                    jobParameters
+                    JobUtil.getJobParameters(makeParamMap("Game Platform A"))
             );
         } catch (Exception e) {
             log.error(ErrorUtil.exceptionToString(e));
@@ -40,13 +38,10 @@ public class DailyUseRateStatBatchJobScheduler {
 
     @Scheduled(cron="0/10 * * * * *") // 10 seconds interval
     public void schedulerForGameB() {
-        JobParameters jobParameters = JobUtil.getJobParameters(makeParamMap("Game B"));
-        System.out.println(jobParameters);
-
         try {
             jobLauncher.run(
                     dailyUseRateStatBatchConfig.dailyUseRateStatJob(),
-                    jobParameters
+                    JobUtil.getJobParameters(makeParamMap("Game Platform B"))
             );
         } catch (Exception e) {
             log.error(ErrorUtil.exceptionToString(e));

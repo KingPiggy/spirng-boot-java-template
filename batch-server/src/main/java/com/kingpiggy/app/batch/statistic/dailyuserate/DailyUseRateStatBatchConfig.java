@@ -7,6 +7,7 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.JobScope;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,6 +16,7 @@ import static com.kingpiggy.app.batch.statistic.dailyuserate.DailyUseRateStatBat
 @Slf4j
 @Configuration
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "batch.daily-use-rate-stat.enabled", havingValue = "true")
 public class DailyUseRateStatBatchConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
@@ -37,7 +39,7 @@ public class DailyUseRateStatBatchConfig {
         return new JobExecutionListener() {
             @Override
             public void beforeJob(JobExecution jobExecution) {
-                log.info("[JobExecutionListener#beforeJob] jobExecution is " + jobExecution.getStatus());
+                log.info("[JobExecutionListener#beforeJob] job id : [{}],  param : [{}]", jobExecution.getJobId(), jobExecution.getJobParameters().getString(PARAM_DAILY_USE_RATE_STAT));
             }
 
             @Override

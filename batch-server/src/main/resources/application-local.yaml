@@ -9,3 +9,11 @@ spring:
 # local
 spring:
   profiles: local
+
+batch:
+  daily-use-rate-stat:
+    enabled: false
+
+  weekly-use-rate-stat:
+    enabled: true
+    chunk-size: 10
