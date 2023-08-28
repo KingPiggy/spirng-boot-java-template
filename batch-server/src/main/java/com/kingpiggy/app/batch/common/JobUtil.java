@@ -1,4 +1,4 @@
-package com.kingpiggy.app.common;
+package com.kingpiggy.app.batch.common;
 
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;

@@ -1,7 +1,7 @@
 package com.kingpiggy.app.batch.statistic.dailyuserate;
 
 
-import com.kingpiggy.app.common.JobUtil;
+import com.kingpiggy.app.batch.common.JobUtil;
 import com.kingpiggy.app.core.common.utils.ErrorUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

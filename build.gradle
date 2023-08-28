@@ -113,7 +113,14 @@ project(':api-server') {
 project(':batch-server') {
 	dependencies {
 		implementation project(":core")
+
+		// Spring Batch
 		implementation 'org.springframework.boot:spring-boot-starter-batch'
+
+		// ShedLock
+		implementation 'net.javacrumbs.shedlock:shedlock-spring:4.14.0'
+		implementation 'net.javacrumbs.shedlock:shedlock-provider-jdbc-template:4.14.0'
+
 		testImplementation 'org.springframework.batch:spring-batch-test'
 	}
 }
