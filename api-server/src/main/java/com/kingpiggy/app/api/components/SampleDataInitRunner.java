@@ -1,7 +1,7 @@
 package com.kingpiggy.app.api.components;
 
 import com.kingpiggy.app.api.web.dto.request.SampleRequest;
-import com.kingpiggy.app.api.service.TestService;
+import com.kingpiggy.app.api.service.HelloService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SampleDataInitRunner implements CommandLineRunner {
 
-    private final TestService testService;
+    private final HelloService testService;
 
     @Override
     public void run(String... args) throws Exception {

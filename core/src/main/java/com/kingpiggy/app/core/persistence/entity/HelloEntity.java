@@ -13,8 +13,8 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "kingpiggy_sample")
-public class SampleEntity extends BaseEntity {
+@Table(name = "tb_hello")
+public class HelloEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

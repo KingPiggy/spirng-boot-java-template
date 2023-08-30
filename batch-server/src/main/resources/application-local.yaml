@@ -15,5 +15,5 @@ batch:
     enabled: false
 
   weekly-use-rate-stat:
-    enabled: true
+    enabled: false
     chunk-size: 10
