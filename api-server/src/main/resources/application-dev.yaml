@@ -2,7 +2,7 @@
 spring:
   config:
     activate:
-      on-profile: local
+      on-profile: dev
     properties:
       hibernate:
         format_sql: true

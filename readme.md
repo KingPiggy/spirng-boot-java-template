@@ -28,9 +28,9 @@ $ docker run --name local-mysql -e MYSQL_ROOT_PASSWORD=${PASSWORD} -d -p 3306:33
 ```
 
 (2) Application
-1. VM Option<BR>
+1. VM Option <BR>
 ```
--Dspring.profiles.active=core,local
+-Dspring.profiles.active=core,local -Ddb.url={URL} -Ddb.user={USER} -Ddb.password={PASSWORD}
 ```
 
 <BR>

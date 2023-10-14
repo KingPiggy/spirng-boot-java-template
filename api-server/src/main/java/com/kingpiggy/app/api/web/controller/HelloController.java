@@ -16,6 +16,11 @@ public class HelloController {
 
     private final HelloService helloService;
 
+    @GetMapping
+    public ApiResponse getHello() {
+        return ApiResponse.OK("Hello World!");
+    }
+
     @GetMapping("/data-jpa")
     public ApiResponse getDataByDataJpa() {
         return ApiResponse.OK(helloService.findAllByDataJpa());

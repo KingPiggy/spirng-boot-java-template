@@ -1,14 +1,11 @@
-# common
+# local
 spring:
+  config:
+    activate:
+      on-profile: local
   batch:
     jdbc.initialize-schema: always
     job.enabled: false
-
----
-
-# local
-spring:
-  profiles: local
 
 batch:
   daily-use-rate-stat:
