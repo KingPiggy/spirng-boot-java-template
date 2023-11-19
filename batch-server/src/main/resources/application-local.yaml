@@ -14,3 +14,9 @@ batch:
   weekly-use-rate-stat:
     enabled: false
     chunk-size: 10
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8081
